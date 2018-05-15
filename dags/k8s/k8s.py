@@ -1,7 +1,7 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.contrib.kubernetes_pod_operator import KubernetesPodOperator
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.dummy_operator import DummyOperator
 
 dag = DAG('hello_world_k8s', description='Simple tutorial DAG',
           schedule_interval='* * * * *',

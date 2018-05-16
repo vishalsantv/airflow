@@ -43,6 +43,6 @@ dag = DAG('hello_world_k8s', default_args=default_args, description='Simple tuto
 
 dummy_operator = DummyOperator(task_id='dummy_task', retries=3, dag=dag)
 
-k8s_operator = KubernetesPodOperator(task_id='dummy_task', image='hello-world', name='analytics-eng',  namespace='analytics-eng', dag=dag)
+k8s_operator = KubernetesPodOperator(task_id='k8s_task', image='hello-world', name='analytics-eng',  namespace='analytics-eng', dag=dag)
 
 dummy_operator >> k8s_operator

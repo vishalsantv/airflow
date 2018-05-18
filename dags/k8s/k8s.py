@@ -4,7 +4,7 @@ from airflow import DAG
 from airflow.contrib.operators.kubernetes_pod_operator import KubernetesPodOperator
 from airflow.operators.dummy_operator import DummyOperator
 from datetime import timedelta
-
+from kubernetes import config
 
 
 default_args = {
@@ -36,7 +36,6 @@ default_args = {
 dag = DAG('hello_world_k8s', default_args=default_args, description='Simple tutorial DAG',
           schedule_interval=timedelta(days=1)
          )
-
 
 
 

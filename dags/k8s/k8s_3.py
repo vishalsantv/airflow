@@ -34,7 +34,7 @@ dag = DAG(dag_id='example_kubernetes_sleep_operator',
 k = KubernetesPodOperator(
     namespace='analytics-eng',
     image="debian",
-    arguments=["sleep", "300"],
+    arguments=["sleep", "60"],
     labels={"foo": "bar"},
     name="airflow-test-sleep-pod",
     in_cluster=False,

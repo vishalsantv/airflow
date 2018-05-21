@@ -31,7 +31,7 @@ dag = DAG(
     schedule_interval=None)
 
 k = KubernetesPodOperator(
-    namespace='default',
+    namespace='analytics-eng',
     image="ubuntu:16.04",
     cmds=["bash", "-cx"],
     arguments=["echo", "10"],

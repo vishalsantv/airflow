@@ -25,10 +25,10 @@ args = {
     'start_date': airflow.utils.dates.days_ago(2)
 }
 
-dag = DAG(
-    dag_id='example_kubernetes_sleep_operator',
-    default_args=args,
-    schedule_interval=None)
+dag = DAG(dag_id='example_kubernetes_sleep_operator',
+          default_args=args,
+          schedule_interval='*/2 * * * *'
+          )
 
 
 k = KubernetesPodOperator(

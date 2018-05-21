@@ -31,7 +31,7 @@ dag = DAG(
 def print_stuff():
     print("stuff!")
 
-
+# this will fail with an asset exception if zip not installed 
 def use_zip_binary():
     rc = os.system("zip")
     assert rc == 0

@@ -1,6 +1,5 @@
 from airflow import DAG
-from airflow.operators import BashOperator, HiveOperator
-from datetime import datetime, timedelta
+from airflow.operators import HiveOperator
 
 args = {
     'owner': 'airflow',

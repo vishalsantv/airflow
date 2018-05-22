@@ -20,5 +20,3 @@ task2 = HiveOperator(
         depends_on_past=False,
         dag=dag
 )
-# defining the job dependency
-task2.set_upstream(task1)

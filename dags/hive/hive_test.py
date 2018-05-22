@@ -1,5 +1,7 @@
+import airflow
 from airflow import DAG
 from airflow.operators import HiveOperator
+
 
 args = {
     'owner': 'airflow',

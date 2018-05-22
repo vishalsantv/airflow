@@ -11,6 +11,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+# AS of now this does not work !!!!!!!! this is good to have but the KubernetesExecutor is not supported
+
+
 from __future__ import print_function
 import airflow
 from airflow.operators.python_operator import PythonOperator
